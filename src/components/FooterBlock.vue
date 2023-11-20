@@ -6,6 +6,11 @@
     </footer>
 </template>
 
-<style lang="">
-    
+<style lang="scss">
+@import '@/assets/scss/style.scss';
+
+    .footer {
+        padding: rem(25) 0;
+        background-color: $cape-cod;
+    }
 </style>

@@ -2,22 +2,27 @@
     <header class="header">
         <div class="container">
             <div class="header__content">
-                <div class="header__logo">
-                    <router-link to="/" class="navigation__link"><img src="" alt="logo"></router-link>
+                <div>
+                    <router-link to="/" class="navigation__link">
+                        <img class="header__logo" src="@/assets/images/icons/logo.svg" alt="logo">
+                    </router-link>
                 </div>
                 <nav class="navigation">
                     <ul class="navigation__list">
                         <li>
-                            <router-link to="/review" class="navigation__link">Рецензии</router-link>
+                            <router-link to="/booklist" class="navigation__link">Books</router-link>
                         </li>
                         <li>
-                            <router-link to="/booklist" class="navigation__link">Книги</router-link>
+                            <router-link to="/reviews" class="navigation__link">Reviews</router-link>
+                        </li>
+                        <li>
+                            <router-link to="/about" class="navigation__link">About</router-link>
                         </li>
                     </ul>
                 </nav>
                 <div>
                     <li>
-                        <router-link to="/shelf" class="navigation__link">Моя полка</router-link>
+                        <router-link to="/shelf" class="navigation__link">Shelf</router-link>
                     </li>
                 </div>
             </div>
@@ -32,16 +37,25 @@ export default {
 </script>
 
 <style lang="scss">
-    .router-link-active {
-        color: black;
+@import '@/assets/scss/style.scss';
+
+    .navigation__list .router-link-active {
+        color: $bitter;
     }
 
     .header {
-        padding: 25px 0px;
+        padding: rem(15) 0;
+
+        background-color: $cape-cod;
+
         &__content {
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+
+        &__logo {
+            width: rem(60);
         }
     }
 
@@ -49,10 +63,23 @@ export default {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
         &__list {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: rem(30);
+        }
+
+        &__link {
+            @include text-props(28, 40, 500);
+
+            transition: all 0.3s;
+
+            color: $dawn-pink;
+
+            &:hover {
+                opacity: 0.8;
+            }
         }
     }
 </style>

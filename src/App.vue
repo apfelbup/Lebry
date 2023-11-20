@@ -14,7 +14,7 @@
 </template>
 
 <style lang="scss">
-  @import '@/assets/scss/global.scss';
+  @import '@/assets/scss/style.scss';
 
   .container {
     width: 100%;
@@ -22,7 +22,7 @@
 
     margin: 0 auto;
 
-    padding: 0 20px;
+    padding: 0 15px;
   }
 
   .page {
@@ -32,6 +32,8 @@
 
     &__content {
       flex-grow: 1;
+
+      background-color: $dawn-pink;
     }
 
     &__footer {

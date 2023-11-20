@@ -1,0 +1,60 @@
+.section {
+    &--green {
+        background-color: $corduroy;
+    }
+
+    &--full {
+        height: 90vh;
+    }
+
+    &__heading {
+        position: relative;
+    }
+
+    &__heading--decor {
+        min-height: rem(70);
+
+        margin-bottom: rem(40)
+    }
+
+    &__heading--decor & {
+        &__title,
+        &__subtitle {
+            position: absolute;
+
+            font-family: $font-family-josefin;
+            color: $sun;
+        }
+
+        &__title {
+            right: 50%;
+
+            @include text-props(48, 40, 600);
+        }
+
+        &__subtitle {
+            right: 44%;
+            top: rem(40);
+
+            @include text-props(20, 28, 400);
+        }
+    }
+
+    &__title {
+        &--size {
+            &-big {
+                
+            }
+        }
+    }
+
+    &__paddings {
+        &--default {
+            padding: rem(50) 0;
+        }
+
+        &--big {
+            padding: rem(110) 0;
+        }
+    }
+}
